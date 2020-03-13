@@ -1,24 +1,22 @@
 os:
-  - osx
+    - windows
 
 branches:
-  only:
-    - master
-    - dev
+    only:
+        - master
+        - dev
 
 env:
-  - NODE_VERSION="7.0.0"
+    - NODE_VERSION="13.9.0"
 
 install:
-  - chmod a+x ./scripts/ci.sh
+    - chmod a+x ./scripts/ci.sh
 
 script:
-  - ./scripts/ci.sh
-
-
+    - ./scripts/ci.sh
 
 notifications:
-  email:
-    recipients: arkenthera@gmail.com
-  on_success: never
-  on_failure: always
+    email:
+        recipients: arkenthera@gmail.com
+    on_success: never
+    on_failure: always
