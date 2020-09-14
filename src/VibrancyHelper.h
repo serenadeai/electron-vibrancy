@@ -35,20 +35,6 @@ namespace Vibrancy {
         VibrancyHelper();
         ~VibrancyHelper() { }
         bool DisableVibrancy(unsigned char* buffer);
-        #ifdef PLATFORM_OSX
-            struct ViewOptions {
-                int ViewId;
-                int ResizeMask;
-                int Width;
-                int Height;
-                int X;
-                int Y;
-                int Material;
-            };
-            ViewOptions GetOptions(v8::Local<v8::Array> options);
-            std::map<int, NSVisualEffectView* > views_;
-            int viewIndex_;
-        #endif
         int32_t AddView(unsigned char* buffer, v8::Local<v8::Array> options);
         bool UpdateView(unsigned char* buffer, v8::Local<v8::Array> options);
         bool RemoveView(unsigned char* buffer, v8::Local<v8::Array> options);

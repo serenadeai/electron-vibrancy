@@ -22,11 +22,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //----------------------------------------------------------------------------
+#if defined(_MSC_VER)
 #include "./Common.h"
 #include "./Vibrancy.h"
+#else
+#include <nan.h>
+#include "./Vibrancy_empty.h"
+#endif
 
+#if defined(_MSC_VER)
 NAN_MODULE_INIT(InitAll) {
     Vibrancy::Vibrancy::Init(target);
 }
+#else
+NAN_MODULE_INIT(InitAll) {
+}
+#endif
+
 
 NODE_MODULE(Vibrancy, InitAll)

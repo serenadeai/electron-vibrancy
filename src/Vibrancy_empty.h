@@ -22,21 +22,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //----------------------------------------------------------------------------
-#ifndef SRC_COMMON_H_
-#define SRC_COMMON_H_
+#ifndef SRC_VIBRANCY_H_
+#define SRC_VIBRANCY_H_
+
+namespace Vibrancy {
+    class Vibrancy : public Nan::ObjectWrap {
+     public:
+        static void Init(Nan::ADDON_REGISTER_FUNCTION_ARGS_TYPE target);
+    };
+}  // namespace Vibrancy
 //----------------------------------------------------------------------------
-
-#define V8Value v8::Local<v8::Value>
-#define V8Array v8::Local<v8::Array>
-
-#include <nan.h>
-
-#if defined(_MSC_VER)
-#define PLATFORM_WIN32
-#include <dwmapi.h>
-#endif
-
-#include <map>
-#include <utility>
-//----------------------------------------------------------------------------
-#endif  // SRC_COMMON_H_
+#endif  // SRC_VIBRANCY_H_
