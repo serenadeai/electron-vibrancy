@@ -8,7 +8,7 @@
             ],
             'conditions':[
                 ['OS=="win"', {
-                    "sources!": [
+                    "sources": [
                         "src/Common.h",
                         "src/Vibrancy.h",
                         "src/Vibrancy.cc",
