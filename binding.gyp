@@ -7,7 +7,7 @@
                 "src/Vibrancy_empty.h",
             ],
             'conditions':[
-                ['OS!="win"', {
+                ['OS=="win"', {
                     "sources!": [
                         "src/Common.h",
                         "src/Vibrancy.h",
